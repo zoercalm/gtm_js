@@ -126,3 +126,25 @@ formId': formId
 
 
 
+### отслеживание DOM некоторых вложенных классов:
+
+![image](https://github.com/user-attachments/assets/81651986-361f-4f00-9762-2cbf6fc24df9)
+
+<script>
+// Функция для отслеживания кликов по элементам .popup-goto внутри .popup.popup-linex и .popup.popup-forte
+function trackPopupGotoClicks() {
+    var popupElements = document.querySelectorAll('.popup.popup-linex .popup-goto, .popup.popup-forte .popup-goto');
+    popupElements.forEach(function(popupGotoLink) {
+        popupGotoLink.addEventListener('click', function () {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'pharmacy_click',
+                'eventCategory': 'Pharmacy Link Click'
+            });
+        });
+    });
+}
+
+// Ждем полной загрузки страницы
+document.addEventListener('DOMContentLoaded', trackPopupGotoClicks);
+</script>
