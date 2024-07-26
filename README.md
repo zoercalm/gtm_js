@@ -2,7 +2,7 @@
 
 ### для метрики отправка переменных через GTM: 
 
-<script>
+`<script>
 // Получаем значения переменных из GTM
 var pagePath = '{{Page Path}}'; // Переменная GTM
 var cleanRating = '{{cjs - clean rating}}'; // Переменная GTM
@@ -19,12 +19,12 @@ cleanRating
 
 // Отправляем данные в Яндекс Метрику
 ym(96865152, 'params', window.yaParams || {});
-</script>
+</script>`
 
 
 
 ### DOM CLICK VIDEO PLAY TRACKING - stopfever 2024-07-11:
-<script>
+`<script>
 function addClickEventListeners() {
 document.querySelectorAll('[id^="play_"]').forEach(function(playButton) {
 playButton.addEventListener('click', function(e) {
@@ -46,12 +46,13 @@ click_video': playId
 
 // Запуск функции после загрузки DOM
 addClickEventListeners();
-</script>
+</script>`
 ---
 
 ### отправка формы с отслеживанием ее полей:
-Contact Form pages
-<script>
+#### Contact Form pages
+
+`<script>
 document.querySelectorAll('form').forEach(function(form) {
 console.log("gtm_js_debug = Form found");
 
@@ -86,11 +87,11 @@ formId': formId
 
 });
 });
-</script>
+</script>`
 ---
 
 ### DL - Form Submitted
-<script>
+`<script>
 console.log("gtm_js_debug = Thank You page loaded");
 
 // Извлеките данные из sessionStorage
@@ -118,7 +119,7 @@ formEmail': formEmail,
 formName': formName,
 formId': formId
 });
-</script>
+</script>`
 
 ### Отслеживание popup с классами, начинающимися с **"popup-"** (например popup-linex и popup-forte)
 `.popup[class*="popup-"]`
@@ -130,7 +131,7 @@ formId': formId
 
 ![image](https://github.com/user-attachments/assets/81651986-361f-4f00-9762-2cbf6fc24df9)
 
-<script>
+`<script>
 // Функция для отслеживания кликов по элементам .popup-goto внутри .popup.popup-linex и .popup.popup-forte
 function trackPopupGotoClicks() {
     var popupElements = document.querySelectorAll('.popup.popup-linex .popup-goto, .popup.popup-forte .popup-goto');
@@ -147,4 +148,4 @@ function trackPopupGotoClicks() {
 
 // Ждем полной загрузки страницы
 document.addEventListener('DOMContentLoaded', trackPopupGotoClicks);
-</script>
+</script>`
