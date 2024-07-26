@@ -47,7 +47,7 @@ click_video': playId
 // Запуск функции после загрузки DOM
 addClickEventListeners();
 </script>
-
+---
 
 ### отправка формы с отслеживанием ее полей:
 Contact Form pages
@@ -87,9 +87,9 @@ formId': formId
 });
 });
 </script>
+---
 
-
-DL - Form Submitted
+### DL - Form Submitted
 <script>
 console.log("gtm_js_debug = Thank You page loaded");
 
@@ -101,7 +101,7 @@ var formId = sessionStorage.getItem('formId');
 console.log("gtm_js_debug = Retrieved formEmail from sessionStorage: " + formEmail);
 console.log("gtm_js_debug = Retrieved formName from sessionStorage: " + formName);
 console.log("gtm_js_debug = Retrieved formId from sessionStorage: " + formId);
-
+---
 // Отправьте данные в GTM
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
@@ -111,6 +111,7 @@ formName': formName,
 formId': formId
 });
 
+  ---
 console.log("gtm_js_debug = DataLayer event pushed on Thank You page", {
 event': 'form_sent_successfully',
 formEmail': formEmail,
@@ -118,3 +119,10 @@ formName': formName,
 formId': formId
 });
 </script>
+
+### Отслеживание popup с классами, начинающимися с **"popup-"** (например popup-linex и popup-forte)
+`.popup[class*="popup-"]`
+![image](https://github.com/user-attachments/assets/0483332b-cb44-4978-ba06-80328694fc37)
+
+
+
