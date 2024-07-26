@@ -1,4 +1,4 @@
-# [Cheat sheet]([https://www.example.com](https://www.markdownguide.org/cheat-sheet/))  
+# [Cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 
 ### для метрики отправка переменных через GTM: 
 
