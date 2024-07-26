@@ -118,5 +118,3 @@ formName': formName,
 formId': formId
 });
 </script>
-
-New note
